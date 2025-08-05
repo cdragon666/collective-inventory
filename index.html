@@ -5,102 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Collective Inventory</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
 
-    header {
-      background-color: #2a67c8;
-      padding: 12px 20px;
+    nav {
+      background-color: #2c6ed5;
       display: flex;
       align-items: center;
+      padding: 10px 40px;
+      gap: 40px;
     }
 
-    header img {
-      height: 60px;
-      margin-right: 15px;
+    .nav-left img {
+      height: 100px; /* ⬅️ Made logo bigger */
+      background: white;
+      border-radius: 14px;
+      padding: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 700;
+    .nav-right {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .tagline {
-      margin-top: 4px;
-      font-size: 1rem;
-      font-weight: 400;
+    .nav-right a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: opacity 0.2s;
+    }
+
+    .nav-right a:hover {
+      opacity: 0.85;
     }
 
     .hero {
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 40px 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .text-box {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 30px;
+      max-width: 750px;
+      color: white;
+      border-radius: 10px;
       text-align: center;
     }
 
-    .hero-text {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 800px;
+    .text-box h1 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
     }
 
-    .hero-text p {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin: 20px 0;
-      line-height: 1.6;
+    .text-box p {
+      font-size: 1.05em;
+      line-height: 1.7em;
     }
 
     @media (max-width: 768px) {
-      .hero-text {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        margin-top: 10px;
+        gap: 15px;
+      }
+
+      .text-box {
         padding: 20px;
       }
 
-      header h1 {
-        font-size: 1.5rem;
+      .text-box h1 {
+        font-size: 1.6em;
       }
 
-      .hero-text p {
-        font-size: 1rem;
+      .text-box p {
+        font-size: 0.95em;
       }
 
-      header img {
-        height: 50px;
+      .nav-left img {
+        height: 80px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.jpg" alt="Collective Inventory Logo" />
-    <div>
-      <h1>Collective Inventory</h1>
-      <div class="tagline">Your Property, Our Priority</div>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
+  <nav>
+    <div class="nav-left">
+      <img src="logo.jpg" alt="Logo">
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Make a Booking</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="text-box">
+      <h1>Welcome to Collective Inventory</h1>
       <p>
         At Collective Inventory, we provide independent and highly detailed property inspection reports for letting agents and landlords across London, Surrey, Hampshire, Middlesex, and Berkshire.
-      </p>
-      <p>
+        <br><br>
         Our reports are tailored to meet the specific needs of each client—delivered with consistency, accuracy, and a commitment to the highest standards.
-      </p>
-      <p>
+        <br><br>
         Fully insured, available seven days a week, and trusted by professionals who value reliability and clarity in every inspection.
       </p>
     </div>
-  </section>
+  </div>
+
 </body>
 </html>
